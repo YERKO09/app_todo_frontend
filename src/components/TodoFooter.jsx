@@ -24,7 +24,7 @@ const TodoFooter = ({
               }
             >
               <a className="page-link" href="#">
-                Previous
+                Anterior
               </a>
             </li>
 
@@ -50,21 +50,21 @@ const TodoFooter = ({
               style={!next ? { cursor: "not-allowed" } : { cursor: "pointer" }}
             >
               <a className="page-link" href="#">
-                Next
+                Siguiente
               </a>
             </li>
           </>
         </ul>
       </nav>
       <div>
-        <span className="me-2">Order by:</span>
+        <span className="me-2">Ordenar por:</span>
         <button
           className={`btn btn-outline-primary me-2 ${
             order === "asc" ? "active" : ""
           }`}
           onClick={() => setOrder("asc")}
         >
-          Active
+          Activo
         </button>
         <button
           className={`btn btn-outline-primary ${
@@ -72,7 +72,7 @@ const TodoFooter = ({
           }`}
           onClick={() => setOrder("desc")}
         >
-          Completed
+          Completado
         </button>
       </div>
     </div>

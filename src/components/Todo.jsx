@@ -13,13 +13,13 @@ const Todo = ({ todo, removeTodo, updateTodo }) => {
           className="btn btn-sm btn-warning me-1"
           onClick={() => updateTodo(todo.id)}
         >
-          Update
+          Actualizar
         </button>
         <button
           className="btn btn-sm btn-danger"
           onClick={() => removeTodo(todo.id)}
         >
-          Delete
+          Borrar
         </button>
       </div>
     </li>

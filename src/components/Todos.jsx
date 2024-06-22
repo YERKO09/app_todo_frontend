@@ -17,7 +17,7 @@ const Todos = ({ todos, removeTodo, updateTodo }) => {
       {todos.length === 0 && (
         <li className="list-group-item">
           <div className="d-flex">
-            <h5>No todos found</h5>
+            <h5>No se encontraron tareas...</h5>
           </div>
         </li>
       )}

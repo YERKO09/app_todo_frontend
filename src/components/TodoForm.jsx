@@ -15,13 +15,13 @@ const TodoForm = ({ addTodo }) => {
       <input
         type="text"
         className="form-control"
-        placeholder="Enter a new todo"
+        placeholder="Ingresa una nueva tarea todo"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <div className="d-grid mt-3">
         <button className="btn btn-primary" type="submit">
-          Add
+          Agregar
         </button>
       </div>
     </form>

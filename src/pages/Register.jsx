@@ -4,19 +4,33 @@ import { UserContext } from "../providers/UserProvider";
 const RegisterPage = () => {
   const { registerWithEmailAndPassword } = useContext(UserContext);
 
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await registerWithEmailAndPassword(email, password);
+    const response = await registerWithEmailAndPassword(username, email, password);
     alert(response?.message || "Something went wrong");
   };
 
   return (
     <div className="container">
-      <h1>Register</h1>
+      <h1>Registrarse</h1>
       <form onSubmit={handleSubmit}>
+        <div className="mb-3">
+            <label htmlFor="username" className="form-label">
+              Nombre de usuario
+            </label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="form-control"
+              placeholder="Enter your username"
+            />
+          </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">
             Email
@@ -44,7 +58,7 @@ const RegisterPage = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Create account
+          Crear cuenta
         </button>
       </form>
     </div>

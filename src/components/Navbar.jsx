@@ -13,22 +13,22 @@ const Navbar = () => {
           {token ? (
             <>
               <Link to="/" className="btn btn-sm btn-outline-light me-2">
-                Home
+                Inicio
               </Link>
               <button
                 className="btn btn-sm btn-outline-danger"
                 onClick={logout}
               >
-                logout
+                Cerrar sesión
               </button>
             </>
           ) : (
             <>
               <Link to="/login" className="btn btn-sm btn-outline-light me-2">
-                Login
+                Iniciar sesión
               </Link>
               <Link to="/register" className="btn btn-sm btn-outline-light">
-                Register
+                Registrarse
               </Link>
             </>
           )}

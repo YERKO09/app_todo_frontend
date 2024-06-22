@@ -30,13 +30,14 @@ const UserProvider = ({ children }) => {
     return data;
   };
 
-  const registerWithEmailAndPassword = async (email, password) => {
+  const registerWithEmailAndPassword = async (username, email, password) => {
     const response = await fetch(`${BASE_URL}/users/register`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ username, email, password }),
     });
     const data = await response.json();
+    console.log('DATA:',data)
     return data;
   };
 

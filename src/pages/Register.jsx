@@ -11,6 +11,7 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await registerWithEmailAndPassword(username, email, password);
+    console.log(response)
     alert(response?.message || "Something went wrong");
   };
 
@@ -28,7 +29,7 @@ const RegisterPage = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="form-control"
-              placeholder="Enter your username"
+              placeholder="Ingresa un nombre de usuario"
             />
           </div>
         <div className="mb-3">
@@ -41,7 +42,7 @@ const RegisterPage = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="form-control"
-            placeholder="Enter your email"
+            placeholder="Ingresa tu Email"
           />
         </div>
         <div className="mb-3">
@@ -54,7 +55,7 @@ const RegisterPage = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="form-control"
-            placeholder="Enter your password"
+            placeholder="Ingresa una contraseña"
           />
         </div>
         <button type="submit" className="btn btn-primary">
